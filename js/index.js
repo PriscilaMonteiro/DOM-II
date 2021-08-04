@@ -29,16 +29,28 @@ homeColor[i].addEventListener('mouseover', function(event){
 
 // Event listener: NOT WORKING
 
-// const signButton = document.querySelectorAll('.btn')
+const signButton = document.querySelectorAll('.btn')
 
-// for(let i=0; i<signButton.length; i++){
-//  signButton[i].addEventListener("click", function(event){
-//  signButton.innerHTML = "Here you Go!";
-//  })
-// }
+for(let i=0; i<signButton.length; i++){
+ signButton[i].addEventListener("click", hereYouGo);
+}
+
+ function hereYouGo(){
+  signButton.innerHTML = "Here you Go!";
+ }
 
 
- 
+
+ // Event listener: scroll
+
+ window.addEventListener('scroll', () =>{
+  const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+  const scrolled = window.scrollY;
+
+  if(scrolled === scrollable) {
+   alert("You've scrolled to the end");
+  }
+ });
 
 
 
