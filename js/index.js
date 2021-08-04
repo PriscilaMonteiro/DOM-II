@@ -29,17 +29,17 @@ homeColor[i].addEventListener('mouseover', function(event){
 
 // Event listener: Focus and Blur - NOT WORKING
 
-const signButton = document.querySelectorAll('div.btn')
+// const signButton = document.querySelectorAll('div.btn')
 
-for(let i=0; i<signButton.length; i++){
-signButton[i].addEventListener("focus", function(event){
- event.target.style.background='red';
-}, true);
+// for(let i=0; i<signButton.length; i++){
+// signButton[i].addEventListener("focus", function(event){
+//  event.target.style.background='red';
+// }, true);
 
-signButton[i].addEventListener("blur", function(event){
- event.target.style.background='';
-}, true);
-}
+// signButton[i].addEventListener("blur", function(event){
+//  event.target.style.background='';
+// }, true);
+// }
 
  
 
@@ -68,3 +68,18 @@ const load = document.querySelector('.footer p')
 window.addEventListener("load", (event) => {
  load.textContent ="Copyright Fun Bus 2020 - Page is fully Loaded!";
 });
+
+// Event listener: Resize
+
+
+window.addEventListener('resize', funInTheSun);
+
+var x = 0;
+function funInTheSun(){
+ var txt = x +=1;
+ document.querySelector('.destination p').textContent = "Window resized " + txt + " times";
+ 
+}
+
+
+
