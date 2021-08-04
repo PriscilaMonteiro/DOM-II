@@ -91,7 +91,7 @@ function funInTheSun(){
 }
 
 
-// Stop Propagation 
+// Stop Propagation & Event Listener: Click
 const div = document.querySelector('div.destination')
 const btn = document.querySelector('div.btn')
 
@@ -106,5 +106,19 @@ btn.addEventListener('click', function (event) {
     
 });
  
+let changeSize = document.querySelector("img");
+changeSize.addEventListener(
+  "click",
+  function(event) {
+    // highlight the mouseover target
+    event.target.style.borderRadius = "90px";
+    // reset the color after a short delay
+    setTimeout(function() {
+      event.target.style.borderRadius = 0;
+    }, 500);
+  },
+  false
+);
+
 
 
