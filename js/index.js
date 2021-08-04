@@ -27,19 +27,16 @@ homeColor[i].addEventListener('mouseover', function(event){
 }, false);
 }
 
-// Event listener: Focus and Blur - NOT WORKING
+// Event listener: NOT WORKING
 
-// const signButton = document.querySelectorAll('div.btn')
+// const signButton = document.querySelectorAll('.btn')
 
 // for(let i=0; i<signButton.length; i++){
-// signButton[i].addEventListener("focus", function(event){
-//  event.target.style.background='red';
-// }, true);
-
-// signButton[i].addEventListener("blur", function(event){
-//  event.target.style.background='';
-// }, true);
+//  signButton[i].addEventListener("click", function(event){
+//  signButton.innerHTML = "Here you Go!";
+//  })
 // }
+
 
  
 
@@ -81,5 +78,21 @@ function funInTheSun(){
  
 }
 
+
+// Stop Propagation 
+const div = document.querySelector('div.destination')
+const btn = document.querySelector('div.btn')
+
+div.addEventListener('click', function (event) {
+    alert("div clicked: stop propagation");
+    
+});
+
+btn.addEventListener('click', function (event) {
+    event.stopPropagation()
+    alert("btn clicked: stop propagation");
+    
+});
+ 
 
 
