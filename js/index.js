@@ -62,10 +62,9 @@ pickDest.addEventListener('dblclick', function (e) {
 });
 
 
-// Event listener: dblclick
+// Event listener: load
 
-document.addEventListener("load", (event) => {
- if (event.target.load === "loading") {
-  console.log("Loading!");
- }
-})
+const load = document.querySelector('.footer p')
+window.addEventListener("load", (event) => {
+ load.textContent ="Copyright Fun Bus 2020 - Page is fully Loaded!";
+});
